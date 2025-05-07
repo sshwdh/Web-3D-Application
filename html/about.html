@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - 3D Model of traditional Chinese culture</title>
+  
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles/about_style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">3D Model of Traditional Chinese Culture</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container-fluid">
+    <div class="section-content">
+      <h2>About</h2>
+      <p>This website is a cultural visualization project designed to showcase a set of 3D models representing elements of traditional Chinese culture. The site features three models: a blue-and-white porcelain vase, a Peking opera mask, and a Chinese chess set, each highlighting a unique aspect of Chinese art, performance, and classical games. Built with web technologies and powered by the Three.js graphics engine, the platform enables users to interactively explore, rotate, and examine the models in real time, including wireframe inspection. The project emphasizes not only visual realism, but also user engagement and cultural immersion through interactive 3D content.</p>
+    </div>
+
+    <div class="section-content">
+      <h2>3D Models</h2>
+      <p>I used Blender to create and animate all 3D models for this project, which include a blue-and-white porcelain vase, a Peking opera mask, and a Chinese chess set. The modeling process was informed by references to authentic Chinese cultural artifacts, with careful attention paid to geometric structure, proportions, and decorative patterns. All models were optimized through proper topology and UV unwrapping to ensure efficient real-time rendering in the browser via Three.js.
+
+        In terms of interaction design, the porcelain vase includes a compress-and-release animation to simulate deformation behavior; the Peking opera mask model supports interactive texture switching, allowing users to explore different facial designs; and the Chinese chess model features automatic self-rotation for multi-angle viewing. These interactive features were implemented using Three.js and integrated into a web-based platform that combines cultural visualization with interactive user experience.
+        
+        </p>     
+    </div>
+
+    <div class="section-content">
+      <h2>Design</h2>
+      <p>This project presents three web-based interactive 3D model display pages, each showcasing a representative element of Chinese traditional culture: a blue-and-white porcelain vase, a Peking opera facial mask, and a Chinese chess set. The implementation leverages standard web technologies—HTML, CSS, JavaScript—and the Three.js graphics library to construct interactive and visually engaging interfaces.
+
+        Each page adopts a customized layout that centers the 3D model on the screen, with descriptive content and control panels arranged for intuitive user interaction. The interface includes a navigation bar for seamless switching between models. OrbitControls are integrated to allow users to freely rotate, pan, and zoom the model. A wireframe toggle function is provided to enable users to inspect the geometric structure of the model, and automatic self-rotation functionality is implemented for the Peking opera mask and the chess model to facilitate continuous viewing from all angles.
+        
+        All 3D assets were modeled and preprocessed using Blender, including UV unwrapping and animation design, and exported in .glb format. Upon loading in the browser, each model undergoes auto-centering and scaling to ensure consistent framing and proportional rendering within the canvas. The scene lighting consists of a combination of ambient and directional lights to enhance surface realism and spatial depth.
+        
+        Overall, the design balances the expressive aesthetics of traditional Chinese cultural artifacts with the interactivity of modern web technologies. The solution is modular, extensible, and offers an engaging cultural exploration experience through 3D interaction.</p>
+    </div>
+
+    <div class="section-content">
+      <h2>Integration</h2>
+      <p>During the integration phase, I added a banner image to the homepage to enhance the visual structure and provide a clearer entry point. Using CSS, I implemented preview sections for each model, adjusting the size and layout of the preview images to ensure compatibility across different devices and screen sizes. Each preview is accompanied by the corresponding model name, improving interface clarity and usability. This integration effectively combines aesthetic presentation with functional navigation, laying the foundation for further model interaction and exploration.</p>
+    </div>
+
+    <div class="section-content">
+      <h2>Interaction</h2>
+      <p>For interaction design, I integrated Three.js OrbitControls to enable users to freely rotate, scale, and explore 3D models directly within the browser. This allows for intuitive inspection of each model from arbitrary angles. Additionally, for the porcelain vase model, I implemented a compress-and-restore button that allows the user to trigger a vertical deformation animation and return the model to its original state. This interaction enhances the tactile responsiveness of the model and increases user engagement. The overall interaction design emphasizes intuitiveness, responsiveness, and cultural immersion.</p>
+    </div>
+
+    <div class="section-content">
+      <h2>Implementation</h2>
+      <p>After completing the implementation of core features, I conducted systematic functional testing to ensure that all modules—including model loading, interactive controls, animation playback, and wireframe toggling—performed reliably across multiple browsers and devices. In addition, I invited several users to experience the website and collected initial feedback. Positive responses highlighted the clarity of the interface and the intuitive interaction design, while some users pointed out that the animation appeared stiff and lacked smooth transitions. Based on this feedback, I refined the animation logic to improve fluidity and enhance the overall user experience.</p>
+    </div>
+
+    <div class="section-content">
+      <h2>Deeper Understanding</h2>
+      <p>Through this project, I developed a deeper understanding of how real-world objects are modeled and presented in interactive 3D environments. Creating models such as the porcelain vase, opera mask, and Chinese chess set required me to think beyond geometric accuracy and consider how users perceive and interact with culturally meaningful objects in a digital space. Designing features such as deformation animations and texture switching further highlighted the importance of user perception, cultural context, and responsive interaction.
+
+        Moreover, this process significantly strengthened my skills in Three.js, interactive 3D UI development, and user-centered visualization. It deepened my awareness of how technical implementation and creative design intersect, and provided valuable experience that I hope to apply in future projects involving immersive media and cultural communication.</p>
+    </div>
+
+    <div class="section-content">
+      <h2>Deployment & Publication</h2>
+      <p> During the deployment and publication phase, I finalized the integration of the individual model display pages, the homepage, and the about section. All components were thoroughly tested to ensure full functionality and smooth user interaction. The entire project was then packaged into a .zip archive for distribution and archival purposes. After extraction, the website can be run locally using a development environment such as Visual Studio Code, with all interactive features functioning as expected. This deployment approach ensures both portability and maintainability, facilitating future demonstration and evaluation.</p>
+    </div>
+
+    <div class="section-content">
+      <h2>Github Link</h2>
+      <p> https://github.com/sshwdh/ML</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Mobile Web Applications</p>
+    <div class="social-icons">
+      <a href="#"><img src="../images/icons/facebook.png" alt="Facebook" /></a>
+      <a href="#"><img src="../images/icons/twitter.png" alt="Twitter" /></a>
+      <a href="#"><img src="../images/icons/google.png" alt="Google" /></a>
+      <a href="#"><img src="../images/icons/github.png" alt="GitHub" /></a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

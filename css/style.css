@@ -1,0 +1,89 @@
+/* 字体与颜色 */
+  body {
+    font-family: 'Noto Serif SC', 'Microsoft YaHei', serif;
+    background-image: url('../images/banner/background.jpg'); /* 替换为你的背景图路径 */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #333;
+  }
+  
+  
+  /* 顶部标题美化 */
+  h1 {
+    background-image: linear-gradient(to right, #1d4ed8, #60a5fa);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* 模型卡片 hover 效果增强 */
+  a:hover model-viewer {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+  }
+  
+  model-viewer {
+    transition: transform 0.3s ease;
+    border: 1px solid #e5e7eb;
+  }
+  
+  /* 模型下方标题文字 */
+  p {
+    font-size: 1.1rem;
+    color: #ffffff; /* 深灰字体更清晰 */
+  }
+
+  h {
+    font-size: 1.1rem;
+    color: #000000; /* 深灰字体更清晰 */
+  }
+
+  /* 页脚样式 */
+  footer {
+    background-color: #2E3338;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  
+  /* 页脚文字 */
+  footer p {
+    margin-left: 20px;
+  }
+  
+  /* 页脚图标容器 */
+  .social-icons {
+    margin-right: 20px;
+  }
+  
+  /* 页脚图标 */
+  .social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+  }
+  
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* hover 效果 */
+  .social-icons img:hover {
+    transform: scale(1.1) rotate(3deg);
+    opacity: 1;
+    filter: brightness(1.2);
+  }
+  

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>Model Two: Display of Peking Opera Facial Makeup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- 自定义样式 -->
+  <link rel="stylesheet" href="../css/model2.css">
+
+  <!-- Three.js 与插件 -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+
+  <!-- 顶部导航栏 -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between h-16 items-center">
+        <div class="text-xl font-bold text-blue-700">Chinese Traditional Culture</div>
+        <div class="flex items-center space-x-6">
+          <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+          <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+          <!-- 模型展示下拉菜单 -->
+          <div class="relative">
+            <button id="dropdownButton" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+              Model Display ▼
+            </button>
+            <div id="dropdownMenu" class="hidden absolute bg-white border mt-2 rounded shadow-lg z-10 text-left">
+              <a href="model1.html" class="block px-4 py-2 hover:bg-gray-100">Model 1：Blue and white porcelain vase</a>
+              <a href="model2.html" class="block px-4 py-2 hover:bg-gray-100">Model 2：Peking Opera facial makeup</a>
+              <a href="model3.html" class="block px-4 py-2 hover:bg-gray-100">Model 3：Chinese Chess</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主体内容 -->
+  <main class="flex-grow flex flex-col items-center justify-center text-center px-4 py-10">
+    <h1 class="text-3xl font-bold text-blue-800 mb-4">Model 2：Peking Opera facial makeup</h1>
+    <p class="text-gray-700 max-w-2xl mb-6 leading-relaxed">
+      Peking Opera masks are iconic symbols of Chinese traditional theatre, using vivid colors and patterns to convey characters’ traits, social roles, and fates. Red stands for loyalty and bravery, black for integrity, and white often suggests treachery. These masks combine powerful visual design with deep cultural meaning.
+      This 3D model recreates a classic “Guan Yu” mask design, featuring bold red and black color schemes with symmetrical patterns. Users can interact with the model to examine its detailed lines and layered colors.<br />
+    </p>
+
+    <!-- 控制按钮 -->
+    <div class="flex flex-wrap gap-4 mb-6 justify-center">
+      <button onclick="toggleWireframe()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Switch the wireframe</button>
+      <button onclick="toggleAnimation()" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Play/pause the animation</button>
+      <button onclick="applyTexture()" class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800">Apply black material</button>
+      <button onclick="resetTexture()" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Restore the original material</button>
+    </div>
+
+    <!-- 模型展示区域 -->
+    <div class="w-full max-w-3xl h-[500px] rounded shadow-lg bg-white">
+      <canvas id="threeCanvas" class="w-full h-full"></canvas>
+    </div>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <p class="text-sm">&copy; 2025 Mobile Web Applications</p>
+      <div class="flex space-x-4">
+        <a href="#"><img src="../images/icons/facebook.png" alt="Facebook" class="w-6 h-6" /></a>
+        <a href="#"><img src="../images/icons/twitter.png" alt="Twitter" class="w-6 h-6" /></a>
+        <a href="#"><img src="../images/icons/google.png" alt="Google" class="w-6 h-6" /></a>
+        <a href="#"><img src="../images/icons/github.png" alt="GitHub" class="w-6 h-6" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 下拉菜单控制脚本 -->
+  <script>
+    const dropdownButton = document.getElementById('dropdownButton');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    dropdownButton.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('hidden');
+    });
+
+    window.addEventListener('click', (event) => {
+      if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.add('hidden');
+      }
+    });
+  </script>
+
+  <!-- Three.js 控制脚本 -->
+  <script src="../js/model2.js"></script>
+</body>
+</html>
